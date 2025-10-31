@@ -1,0 +1,46 @@
+Sub CreatePivotChart()
+    Dim ws As Worksheet
+    Dim pc As PivotTable
+    Dim chtObj As ChartObject
+    Dim chartRange As Range
+    
+    ' Reference the worksheet that contains your Pivot Table
+    Set ws = ThisWorkbook.Sheets("Sheet2")
+    
+    ' Reference your Pivot Table by the name you used in UiPath
+    Set pc = ws.PivotTables("PivotData")
+    
+    ' Clear any existing charts (optional, to avoid duplicates)
+    For Each chtObj In ws.ChartObjects
+        chtObj.Delete
+    Next chtObj
+    
+    ' Determine the range of your pivot table (includes Grand Total)
+    Set chartRange = pc.TableRange1
+    
+    ' Add a new chart object (position it next to the pivot)
+    Set chtObj = ws.ChartObjects.Add( _
+        Left:=chartRange.Left + chartRange.Width + 20, _
+        Width:=400, _
+        Top:=chartRange.Top, _
+        Height:=250)
+    
+    ' Set the chart’s data source to the Pivot Table
+    chtObj.Chart.SetSourceData Source:=chartRange
+    
+    ' Use a clustered column chart
+    chtObj.Chart.ChartType = xlColumnClustered
+    
+    ' Apply titles and labels
+    chtObj.Chart.HasTitle = True
+    chtObj.Chart.ChartTitle.Text = "Count of ProblemID by ProblemDifficulty"
+    
+    ' Format axes
+    With chtObj.Chart
+        .HasLegend = False
+        .Axes(xlCategory).HasTitle = True
+        .Axes(xlCategory).AxisTitle.Text = "Problem Difficulty"
+        .Axes(xlValue).HasTitle = True
+        .Axes(xlValue).AxisTitle.Text = "Count of Problem ID"
+    End With
+End Sub

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Chrome Progress - LeetCode",
+  "Type": "Screen",
+  "Id": "87wyOqdcJEGxus43l0YpBg",
+  "Reference": "cjVKZBH3b0i0u944GV32IA/87wyOqdcJEGxus43l0YpBg",
+  "ParentRef": "cjVKZBH3b0i0u944GV32IA/TXDnmsIHE0WgznHTyt7qFw",
+  "Created": "2025-10-29T08:58:41.2070805Z",
+  "Updated": "2025-10-29T08:58:41.2070805Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.16.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

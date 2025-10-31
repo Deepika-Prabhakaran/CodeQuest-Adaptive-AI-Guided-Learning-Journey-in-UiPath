@@ -1,0 +1,422 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:str="clr-namespace:System.Text.RegularExpressions;assembly=System.Text.RegularExpressions" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.C2962E26D93_v2_sub_generateChatCompletion_Create.Bundle;assembly=C2962E26D93_v2_sub_g.WvGaN3FURkA1fz22D1KlwH01" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:um="clr-namespace:UiPath.Mail;assembly=UiPath.Mail.Activities" xmlns:umab="clr-namespace:UiPath.Mail.Activities.Business;assembly=UiPath.Mail.Activities" xmlns:umabh="clr-namespace:UiPath.Mail.Activities.Business.HtmlEditor;assembly=UiPath.Mail.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers.TypeDetailsCustomization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.C2962E26D93_v2_sub_generateChatCompletion_Create.Bundle</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>System.Numerics</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>UiPath.Mail.Activities.Business</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
+      <x:String>UiPath.Mail.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Business.HtmlEditor</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.MicrosoftOffice365.Activities.Mail.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Mail.Activities.Enums</x:String>
+      <x:String>UiPath.Mail.SMTP.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>UiPath.Excel.Helpers</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>C2962E26D93_v2_sub_g.WvGaN3FURkA1fz22D1KlwH01</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Async.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="890,4163.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Chrome Progress - LeetCode" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="603.2,4140" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="2ccb04f1-23e6-4bb6-87d6-1027826881ec" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="601.6,3946.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd2:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+              <Variable x:TypeArguments="x:String" Name="out_text" />
+              <Variable x:TypeArguments="x:String" Name="LeetcodeTableText" />
+              <Variable x:TypeArguments="sd2:DataTable" Name="dt_ScrapedProblems" />
+              <Variable x:TypeArguments="x:String" Name="str_ProblemListForAI" />
+              <Variable x:TypeArguments="s:String[]" Name="arr_RecommendationRows" />
+              <Variable x:TypeArguments="x:String" Name="dtAsString" />
+              <Variable x:TypeArguments="str:Match" Name="matches" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data 'Extract Table Data'" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured' AddCvHeader='true' IsScrollEnabled='false'&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Problemid'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;true&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='ProblemDifficulty'&gt;&#xA;&#x9;&#x9;&lt;IsValidName&gt;true&lt;/IsValidName&gt;&#xA;&#x9;&#x9;&lt;ValidationErrorMessage /&gt;&#xA;&#x9;&#x9;&lt;IsExtra&gt;false&lt;/IsExtra&gt;&#xA;&#x9;&#x9;&lt;CanExtractSimilar&gt;false&lt;/CanExtractSimilar&gt;&#xA;&#x9;&#x9;&lt;Format xsi:type='TextColumnFormat' /&gt;&#xA;&#x9;&lt;/Column&gt;&#xA;&#x9;&lt;Column xsi:type='DataNextLink' /&gt;&#xA;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column1' attr='fulltext'&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="568,189.6" sap2010:WorkflowViewState.IdRef="NExtractData_2" LimitExtractionTo="None" MaximumResults="0" ScopeIdentifier="2ccb04f1-23e6-4bb6-87d6-1027826881ec" Version="V5">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable BrowserURL="leetcode.com/progress" CVScreenId="ac3d4466-365c-4b03-8bd7-0a51ecc4b5eb" CvElementArea="1159, 829, 51, 44" CvType="Button" DesignTimeRectangle="1176, 843, 17, 17" ElementType="Icon" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;nav&amp;gt;button&amp;gt;svg' idx='2' parentid='__next' tag='svg' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='text-label-2 dark:text-dark-label-2' parentid='__next' tag='svg' aaname='' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="1811afc7-34a7-43c8-9091-06e058ac732d" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='__blank' title='Progress - LeetCode' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+                  <uix:TargetAnchorable.PointOffset>
+                    <uix:PointOffset X="0" Y="0" />
+                  </uix:TargetAnchorable.PointOffset>
+                </uix:TargetAnchorable>
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable BrowserURL="https://leetcode.com/progress/?page=1" ContentHash="cXh2d3iKF0KYp5gAYoO_hQ" DesignTimeRectangle="242, 383, 980, 4262" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl aria-role='rowgroup' tag='DIV' /&gt;" Guid="6377c6d1-428e-41b9-8735-7292b02ab2cb" InformativeScreenshot="90bbf523751fb665e0d15828b4fe4a26.png" Reference="cjVKZBH3b0i0u944GV32IA/dBd9ga9Y6k-Raf3BE6F_uA" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='__blank' title='Progress - LeetCode' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
+              </uix:NExtractData.Target>
+            </uix:NExtractData>
+            <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="568,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="Leetcodedata2.xlsx" />
+            <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_ScrapedProblems]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="568,120" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="Sheet1" WorkbookPath="Leetcodedata2.xlsx" />
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="568,1705.6" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+              <ueab:ExcelProcessScopeX.Body>
+                <ActivityAction x:TypeArguments="ui:IExcelProcess">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="534.4,1587.2" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="500.8,1527.2" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="Leetcodedata2.xlsx">
+                      <ueab:ExcelApplicationCard.Body>
+                        <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,1234.4" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:String" Name="output_table" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ueab:CreateTableX DisplayName="Format as Table" HasHeaders="True" sap:VirtualizedContainerService.HintSize="433.6,245.6" sap2010:WorkflowViewState.IdRef="CreateTableX_1" OutTableName="[output_table]" Range="[Excel.Sheet(&quot;Sheet1&quot;).Range(&quot;A1:&quot; + UiPath.Excel.Helpers.ExcelUtilities.ConvertColumnIndexToColumnLetter(dt_ScrapedProblems.Columns.Count) + (dt_ScrapedProblems.Rows.Count + 1).ToString())]" TableName="Table1" />
+                            <ueab:CreatePivotTableXv2 DestinationRange="[Excel.Sheet(&quot;Sheet2&quot;).Range(&quot;A1&quot;)]" DisplayName="Create Pivot Table" sap:VirtualizedContainerService.HintSize="433.6,602.4" sap2010:WorkflowViewState.IdRef="CreatePivotTableXv2_1" LayoutRowType="Compact" Range="[Excel.Sheet(&quot;Sheet1&quot;).Range(&quot;A1:&quot; + UiPath.Excel.Helpers.ExcelUtilities.ConvertColumnIndexToColumnLetter(dt_ScrapedProblems.Columns.Count) + (dt_ScrapedProblems.Rows.Count + 1).ToString())]" TableName="PivotData" ValuesMode="Columns">
+                              <ueab:CreatePivotTableXv2.Body>
+                                <ActivityAction>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,406.4" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="ProblemDifficulty" Function="Sum" sap:VirtualizedContainerService.HintSize="416,118.4" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_1" Type="Row" />
+                                    <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="Problemid" Function="Count" sap:VirtualizedContainerService.HintSize="416,118.4" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_4" Type="Value" />
+                                    <ueab:PivotTableFieldX DisplayName="Pivot Field" FieldName="Problemid" Function="Sum" sap:VirtualizedContainerService.HintSize="382.4,95.2" sap2010:WorkflowViewState.IdRef="PivotTableFieldX_6" Type="Row" />
+                                  </Sequence>
+                                </ActivityAction>
+                              </ueab:CreatePivotTableXv2.Body>
+                            </ueab:CreatePivotTableXv2>
+                            <ueab:InvokeVBAX Result="{x:Null}" CodeFilePath="CreatePivotChart.txt" DisplayName="Invoke VBA" EntryMethodName="CreatePivotChart" sap:VirtualizedContainerService.HintSize="433.6,326.4" sap2010:WorkflowViewState.IdRef="InvokeVBAX_2" Workbook="[Excel]">
+                              <ueab:InvokeVBAX.Body>
+                                <ActivityAction>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,89.6" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </Sequence>
+                                </ActivityAction>
+                              </ueab:InvokeVBAX.Body>
+                            </ueab:InvokeVBAX>
+                          </Sequence>
+                        </ActivityAction>
+                      </ueab:ExcelApplicationCard.Body>
+                    </ueab:ExcelApplicationCard>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelProcessScopeX.Body>
+            </ueab:ExcelProcessScopeX>
+            <Assign sap:VirtualizedContainerService.HintSize="568,174.4" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[str_ProblemListForAI]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[" "]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:OutputDataTable DataTable="[dt_ScrapedProblems]" DisplayName="Output Data Table as Text" sap:VirtualizedContainerService.HintSize="568,112.8" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[str_ProblemListForAI]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="568,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[str_ProblemListForAI]" />
+            <isactr:ConnectorActivity Configuration="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" ConnectionId="09386771-59f7-49d2-8905-772962e26d93" DisplayName="Content Generation" sap:VirtualizedContainerService.HintSize="568,424" sap2010:WorkflowViewState.IdRef="ConnectorActivity_2" UiPathActivityTypeId="aba52a00-4c05-318d-8f99-5ad924b2f277">
+              <isactr:ConnectorActivity.FieldObjects>
+                <isactr:FieldObject Name="modelName" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:String">gpt-4o-2024-11-20</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="prompt" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:String" xml:space="preserve">["INPUT DATA: SOLVED PROBLEM HISTORY " &amp; Environment.NewLine &amp; "Analyze the following list Of problems solved By the user. The format Is: ID. Problem Name, Difficulty." &amp; Environment.NewLine &amp; Environment.NewLine &amp; str_ProblemListForAI &amp; Environment.NewLine &amp; "(Example Of inserted data:" &amp; Environment.NewLine &amp; "1. Two Sum, Easy" &amp; Environment.NewLine &amp; "2. Add Two Numbers,   Medium" &amp; Environment.NewLine &amp; "3. Longest Substring Without Repeating Characters,  Medium" &amp; Environment.NewLine &amp; ")" &amp; Environment.NewLine &amp; Environment.NewLine &amp; "RECOMMENDATION RULES " &amp; Environment.NewLine &amp; "1.  **Focus On Mastery:** Identify the most frequent And recently solved **Medium** Or **Hard** topics (Tags). Prioritize recommending New problems In those specific tags." &amp; Environment.NewLine &amp; "2.  **Difficulty Progression:** The recommended problems should maintain the current mastery level Or slightly increase the difficulty (e.g., If mastered 'Medium', recommend 'Medium' or 'Hard')." &amp; Environment.NewLine &amp; "3.  **Quantity:** Provide exactly **5 recommended problems**. " &amp; Environment.NewLine &amp; "4.  **Novelty:** Do Not recommend any problems already present In the 'SOLVED PROBLEM HISTORY' list." &amp; Environment.NewLine &amp; "5.  **Link Generation (Crucial Instruction):** Since I need the LeetCode URL, the problem name you provide **MUST** be the **exact, original, full name** Of the LeetCode problem (e.g., ""Word Search II"" Not ""Word Search 2"")." &amp; Environment.NewLine &amp; Environment.NewLine &amp; "### DESIRED OUTPUT FORMAT ###" &amp; Environment.NewLine &amp; Environment.NewLine &amp; "Present your recommendations As a clean, simple list Of exactly 5 items. The output must strictly follow this exact format:" &amp; Environment.NewLine &amp; Environment.NewLine &amp; "**Problem Recommendation:**" &amp; Environment.NewLine &amp; "1. &lt;Problem url&gt; " &amp; Environment.NewLine &amp; "2. &lt;Problem url&gt;" &amp; Environment.NewLine &amp; "3. &lt;Problem url&gt;" &amp; Environment.NewLine &amp; "4.&lt;Problem url&gt;" &amp; Environment.NewLine &amp; "5. &lt;Problem url&gt;"]</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="isPIIEnabled" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="isFilterPIIEnabled" Type="FieldArgument" />
+                <isactr:FieldObject Name="languageCode" Type="FieldArgument" />
+                <isactr:FieldObject Name="piiEntityCategories_array" Type="FieldArgument" />
+                <isactr:FieldObject Name="confidenceThreshold" Type="FieldArgument" />
+                <isactr:FieldObject Name="topK" Type="FieldArgument" />
+                <isactr:FieldObject Name="contextGrounding" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:String">None</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="_file" Type="FieldArgument" />
+                <isactr:FieldObject Name="folderKey" Type="FieldArgument" />
+                <isactr:FieldObject Name="topP" Type="FieldArgument" />
+                <isactr:FieldObject Name="indexID" Type="FieldArgument" />
+                <isactr:FieldObject Name="numberOfResults" Type="FieldArgument" />
+                <isactr:FieldObject Name="top_p" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:Int64">1</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="instruction" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:String">You are an expert personalized adaptive learning system and coding problem recommender. Your task is to analyze a user's solved problem history and recommend a set of 5-7 similar problems that represent a logical next step in their learning progression.</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="max_tokens" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:Int64" />
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="temperature" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:Double">0</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:Int64">0</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="presence_penalty" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:Int64">0</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="n" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:Int64">1</InArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="_stop" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <InArgument x:TypeArguments="x:String" />
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="out_text" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <OutArgument x:TypeArguments="x:String">[out_text]</OutArgument>
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="out_maskedText" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <OutArgument x:TypeArguments="x:String" />
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="Jit_v2_sub_generateChatCompletion" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <OutArgument x:TypeArguments="uiascb:v2_sub_generateChatCompletion_Create" />
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+                <isactr:FieldObject Name="out_contextGroundingCitationsString" Type="FieldArgument">
+                  <isactr:FieldObject.Value>
+                    <OutArgument x:TypeArguments="x:String" />
+                  </isactr:FieldObject.Value>
+                </isactr:FieldObject>
+              </isactr:ConnectorActivity.FieldObjects>
+            </isactr:ConnectorActivity>
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="568,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[out_text]" />
+            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="568,117.6" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[&quot;Process Completed&quot;]" />
+            <umab:GmailApplicationCard ConnectionAccountName="{x:Null}" ConnectionId="{x:Null}" Account="220701058@rajalakshmi.edu.in" DisplayName="Use Gmail" EmailAddress="220701058@rajalakshmi.edu.in" sap:VirtualizedContainerService.HintSize="568,659.2" sap2010:WorkflowViewState.IdRef="GmailApplicationCard_2" Timeout="90" UseConnectionService="False">
+              <umab:GmailApplicationCard.Body>
+                <ActivityAction x:TypeArguments="um:IMailQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="um:IMailQuickHandle" Name="Gmail" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,452.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <umab:SendMailX Bcc="{x:Null}" Body="{x:Null}" Cc="{x:Null}" HtmlBodyFromText="{x:Null}" ReplyTo="{x:Null}" Account="[Gmail]" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="433.6,392.8" sap2010:WorkflowViewState.IdRef="SendMailX_2" Importance="Normal" IsDraft="False" MaxBodyDocumentSizeMB="2" Sensitivity="Normal" Subject="Top Recommended Problems " To="220701058@rajalakshmi.edu.in" UseDocumentAsBody="False">
+                      <umab:SendMailX.Files>
+                        <scg:List x:TypeArguments="InArgument(x:String)" Capacity="0" />
+                      </umab:SendMailX.Files>
+                      <umab:SendMailX.HtmlBodyFromFile>
+                        <umabh:HtmlContentArgument HtmlBody="{x:Null}" FilePath=".data/HtmlContent1.html">
+                          <umabh:HtmlContentArgument.RuntimeImages>
+                            <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                          </umabh:HtmlContentArgument.RuntimeImages>
+                          <umabh:HtmlContentArgument.ValueMappings>
+                            <scg:List x:TypeArguments="umabh:HtmlValueMappingBase" Capacity="4">
+                              <umabh:HtmlTextValueMapping Name="Value" Value="[out_text]" />
+                            </scg:List>
+                          </umabh:HtmlContentArgument.ValueMappings>
+                        </umabh:HtmlContentArgument>
+                      </umab:SendMailX.HtmlBodyFromFile>
+                    </umab:SendMailX>
+                  </Sequence>
+                </ActivityAction>
+              </umab:GmailApplicationCard.Body>
+              <umab:GmailApplicationCard.ClientId>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </umab:GmailApplicationCard.ClientId>
+              <umab:GmailApplicationCard.ClientSecret>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </umab:GmailApplicationCard.ClientSecret>
+            </umab:GmailApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.OCREngine>
+        <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))">
+          <ActivityFunc.Argument>
+            <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+          </ActivityFunc.Argument>
+        </ActivityFunc>
+      </uix:NApplicationCard.OCREngine>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1098" BrowserType="Chrome" ContentHash="QbIfAyFR9kewFlsi-PsGzQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIzSURBVDhPjZJPaNNQHMdfkTbJW5KltcY6kpjSYJChVMfuA7148KQVQVSEWXaYiiDePOhBFE+7DBFtWjumK2W2zZ95keJUum5d1THEu3ofQv/My8+kfVOrY/VzeXnf9/2+3++FH+qHIKjCAMuWWZ6fJpKHj6w7E1dVISbiygGRgthedo7IXrj/BWNxVWAxU0HIDwjRD4n8f3iVwzxTRWgXPLokQDOlTkFtBJPjnVEFQZBDtBsOwIOzwY22IX0HW4FGSvkEudEIsW2PmxU4TK8gPwVREec30nIMHE1qppQsWDK0DeVz66keJfZeJIkPMQxdpWkKMGbyRO4C4GtkDqfh1TA0MkfuELUXnsNFL8wwzHNwA0TuAR6jY3AdMWT7m0hk96hb3au8mkwm/Z6WzWb3OaZ52TSL1xbMwlV3ncw6r88V7JfjTql0w7Ks452whyiGTnUvwHeJhOxS6fyHeg1q1SVYXqpAfbkK6+9XoOZ+r699BNssfc3lcoGOeWgofBR3O1hLJBKdFg3DiCxY1kW38oRdnJ8wTXM84yyenjedC3bB68gc64S3EDg2T1EBGOTYF1vP+Bv3H5yEe2iQbHvRNI3nOfatn6JgT3DAIvIvWml9BsoHoZU+dJtI/6LrOicG8RtviJAPW9+mdR2exdVWSp4DS4F2Sqk3ZzSJ2LfnygmNR4gp3z/Du4MjAczKAPZ+b4hWYXYkTGz9GA58mVJu/kgri5uG8m7TiN6CJzpHDv8AoZ9EQNi5XTcEDgAAAABJRU5ErkJggg==" InformativeScreenshot="a9108843360a0a82fe199340101a2803.jpg" Reference="cjVKZBH3b0i0u944GV32IA/87wyOqdcJEGxus43l0YpBg" Selector="&lt;html app='chrome.exe' htmlwindowname='__blank' url='https://leetcode.com/progress/?sortBy=frontendId-asc&amp;amp;page=1' /&gt;" Url="https://leetcode.com/progress/?sortBy=frontendId-asc&amp;page=1" Version="V2">
+          <uix:TargetApp.Arguments>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.Arguments>
+          <uix:TargetApp.WorkingDirectory>
+            <InArgument x:TypeArguments="x:String" />
+          </uix:TargetApp.WorkingDirectory>
+        </uix:TargetApp>
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
